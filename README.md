@@ -1,6 +1,9 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/fgdds5v4fmlb3wa3?svg=true)](https://ci.appveyor.com/project/sanjusss/docker-frp)
 ![GitHub tag (latest by date)](https://img.shields.io/github/tag-date/sanjusss/docker-frp.svg)
-![Docker Pulls](https://img.shields.io/docker/pulls/sanjusss/frp.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/sanjusss/frp.svg)  
+![arm32v7](https://img.shields.io/badge/arm32v7-support-green.svg)
+![arm64v8](https://img.shields.io/badge/arm64v8-support-green.svg)
+![amd64](https://img.shields.io/badge/amd64-support-green.svg)
 
 # About
 
