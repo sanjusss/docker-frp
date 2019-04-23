@@ -1,4 +1,4 @@
-﻿#/bin/bash
+﻿#/bin/sh
 set -e
 
 wget https://github.com/fatedier/frp/releases/download/v${APPVEYOR_REPO_TAG_NAME}/frp_${APPVEYOR_REPO_TAG_NAME}_linux_${FRP_ARCH}.tar.gz

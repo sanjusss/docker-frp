@@ -25,7 +25,7 @@ environment:
           FRP_ARCH: amd64
 
 build_script:
-    - sh: ./build.sh
+    - sh: chmod +x ./build.sh && ./build.sh
 
 deploy_script:
     - pwsh: ./deploy.ps1
