@@ -1,6 +1,11 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/fgdds5v4fmlb3wa3?svg=true)](https://ci.appveyor.com/project/sanjusss/docker-frp)
+![GitHub tag (latest by date)](https://img.shields.io/github/tag-date/sanjusss/docker-frp.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/sanjusss/frp.svg)
+
 # About
 
 Docker containers for [fatedier/frp](https://github.com/fatedier/frp).
+Support arm32v7, arm64v8 and amd64.
 
 ## Usage of frps
 
