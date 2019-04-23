@@ -1,11 +1,14 @@
-FROM alpine:latest
+ARG arch=amd64
+ARG version=0.25.3
+ARG frparch=amd64
 
-ENV FRP_VERSION 0.25.3
-RUN wget https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz \
-    && tar -xf frp_${FRP_VERSION}_linux_amd64.tar.gz \
+FROM ${arch}/alpine:latest
+
+RUN wget https://github.com/fatedier/frp/releases/download/v${version}/frp_${version}_linux_${frparch}.tar.gz \
+    && tar -xf frp_${version}_linux_${frparch}.tar.gz \
     && mkdir /frpc \
-    && cp frp_${FRP_VERSION}_linux_amd64/frpc* /frpc/ \
-    && rm -rf frp_${FRP_VERSION}_linux_amd64*
+    && cp frp_${version}_linux_${frparch}/frpc* /frpc/ \
+    && rm -rf frp_${version}_linux_${frparch}*
 
 WORKDIR /frpc
 ENTRYPOINT ["./frpc"]

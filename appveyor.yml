@@ -1,0 +1,31 @@
+﻿
+version: 1.0.0-{build}
+skip_non_tags: true
+pull_requests:
+    do_not_increment_build_number: true
+shallow_clone: true
+image:
+    - Ubuntu
+
+services:
+    - docker
+
+environment:
+    DOCKER_USER:
+        secure: Nr7bDvSp07T3WIg3X3l5jg==
+    DOCKER_PASS:
+        secure: hOx6eh/5WYE/05s/mtOUZqGLifWzRGMToqJaZ7+EUuQ=
+    REMOTE_IMAGE: sanjusss/frp
+    matrix:
+        - ARCH: arm32v7
+          FRP_ARCH: arm
+        - ARCH: arm64v8
+          FRP_ARCH: arm64
+        - ARCH: amd64
+          FRP_ARCH: amd64
+
+build_script:
+    - pwsh: ./build.ps1
+
+deploy_script:
+    - pwsh: ./deploy.ps1
