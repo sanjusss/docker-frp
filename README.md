@@ -7,7 +7,7 @@ Docker containers for [fatedier/frp](https://github.com/fatedier/frp).
 - Get help
 
 ```console
-$ docker run --rm lonwern/frps --help
+$ docker run --rm sanjusss/frp:frps --help
 ```
 
 - Start server
@@ -15,7 +15,7 @@ $ docker run --rm lonwern/frps --help
 ```console
 $ docker run -d --name some-fprs \
     -v /some/conf:/conf \
-    lonwern/frps -c /conf/frps.ini
+    sanjusss/frp:frps -c /conf/frps.ini
 ```
 
 ## Usage of frpc
@@ -23,7 +23,7 @@ $ docker run -d --name some-fprs \
 - Get help
 
 ```console
-$ docker run --rm lonwern/frpc --help
+$ docker run --rm sanjusss/frp:frpc --help
 ```
 
 - Start client
@@ -31,5 +31,5 @@ $ docker run --rm lonwern/frpc --help
 ```console
 $ docker run -d --name some-fprc \
     -v /some/conf:/conf \
-    lonwern/frpc -c /conf/frpc.ini
+    sanjusss/frp:frpc -c /conf/frpc.ini
 ```
