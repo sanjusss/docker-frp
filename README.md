@@ -23,7 +23,19 @@ $ docker run --rm sanjusss/frp:frps --help
 ```console
 $ docker run -d --name some-fprs \
     -v /some/conf:/conf \
+    --net=host \
     sanjusss/frp:frps -c /conf/frps.ini
+```
+docker-compose.yml
+```docker
+version: '2'
+services:
+    frps:
+        image: sanjusss/frp:frps-0.27.1
+        restart: always
+        network_mode: "host"
+        volumes:
+            - "./frps.ini:/frps/frps.ini"
 ```
 
 ## Usage of frpc
@@ -39,5 +51,17 @@ $ docker run --rm sanjusss/frp:frpc --help
 ```console
 $ docker run -d --name some-fprc \
     -v /some/conf:/conf \
+    --net=host \
     sanjusss/frp:frpc -c /conf/frpc.ini
+```
+docker-compose.yml
+```docker
+version: '2'
+services:
+    frpc:
+        image: sanjusss/frp:frpc-0.27.1
+        restart: always
+        network_mode: "host"
+        volumes:
+            - "./frpc.ini:/frpc/frpc.ini"
 ```
